@@ -1,0 +1,7 @@
+C:\Users\Richard Sanchez\Desktop\Assignments\Quarter 4\Sprint 2\IntroToProject\ChessIsAThing\FileThinger\bin\Debug\FileThinger.exe.config
+C:\Users\Richard Sanchez\Desktop\Assignments\Quarter 4\Sprint 2\IntroToProject\ChessIsAThing\FileThinger\bin\Debug\FileThinger.exe
+C:\Users\Richard Sanchez\Desktop\Assignments\Quarter 4\Sprint 2\IntroToProject\ChessIsAThing\FileThinger\bin\Debug\FileThinger.pdb
+C:\Users\Richard Sanchez\Desktop\Assignments\Quarter 4\Sprint 2\IntroToProject\ChessIsAThing\FileThinger\obj\Debug\FileThinger.csprojAssemblyReference.cache
+C:\Users\Richard Sanchez\Desktop\Assignments\Quarter 4\Sprint 2\IntroToProject\ChessIsAThing\FileThinger\obj\Debug\FileThinger.csproj.CoreCompileInputs.cache
+C:\Users\Richard Sanchez\Desktop\Assignments\Quarter 4\Sprint 2\IntroToProject\ChessIsAThing\FileThinger\obj\Debug\FileThinger.exe
+C:\Users\Richard Sanchez\Desktop\Assignments\Quarter 4\Sprint 2\IntroToProject\ChessIsAThing\FileThinger\obj\Debug\FileThinger.pdb
