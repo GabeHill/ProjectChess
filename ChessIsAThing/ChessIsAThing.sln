@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessIsAThing", "ChessIsAThing\ChessIsAThing.csproj", "{FB46711D-92E4-4FA3-B84F-E03756C3A9D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileThinger", "FileThinger\FileThinger.csproj", "{F6A0DED9-27CE-48C9-8741-17C31B178784}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FB46711D-92E4-4FA3-B84F-E03756C3A9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB46711D-92E4-4FA3-B84F-E03756C3A9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB46711D-92E4-4FA3-B84F-E03756C3A9D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A0DED9-27CE-48C9-8741-17C31B178784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A0DED9-27CE-48C9-8741-17C31B178784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A0DED9-27CE-48C9-8741-17C31B178784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A0DED9-27CE-48C9-8741-17C31B178784}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
