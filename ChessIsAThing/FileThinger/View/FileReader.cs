@@ -99,35 +99,10 @@ namespace FileThinger.View
                             default:
                                 break;
                         }
-                        switch (y)
-                        {
-                            case YCoor.One:
-                                Ycoor = 1;
-                                break;
-                            case YCoor.Two:
-                                Ycoor = 2;
-                                break;
-                            case YCoor.Three:
-                                Ycoor = 3;
-                                break;
-                            case YCoor.Four:
-                                Ycoor = 4;
-                                break;
-                            case YCoor.Five:
-                                Ycoor = 5;
-                                break;
-                            case YCoor.Six:
-                                Ycoor = 6;
-                                break;
-                            case YCoor.Seven:
-                                Ycoor = 7;
-                                break;
-                            case YCoor.Eight:
-                                Ycoor = 8;
-                                break;
-                            default:
-                                break;
-                        }
+                        Ycoor = (int)y - 48;
+
+                        //TODO Code to compare here!
+
                         Console.WriteLine($"Moved {side} {rank} to {Xcoor}{Ycoor}.");
                         line = st.ReadLine();
                     }

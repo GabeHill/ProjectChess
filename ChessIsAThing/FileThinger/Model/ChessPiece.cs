@@ -12,6 +12,8 @@ namespace FileThinger.Model
         Side sides;
         XCoor xC;
         YCoor yC;
+        bool isDead = false;
+
         public ChessPiece(Rank r, Side s, XCoor x, YCoor y)
         {
             this.ranker = r;
@@ -24,5 +26,6 @@ namespace FileThinger.Model
         public YCoor YC { get => yC; }
         public Side Sides { get => sides; }
         public Rank Ranker { get => ranker; }
+        public bool IsDead { get => isDead; set => isDead = value; }
     }
 }
