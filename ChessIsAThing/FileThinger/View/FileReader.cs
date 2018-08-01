@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FileThinger.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,42 +10,6 @@ namespace FileThinger.View
 {
     class FileReader
     {
-        public enum Rank
-        {
-            King = 'K',
-            Queen = 'Q',
-            Bishop = 'B',
-            Knight = 'N',
-            Rook = 'R',
-            Pawn = 'P'
-        }
-        public enum Side
-        {
-            light = 'l',
-            dark = 'd'
-        }
-        public enum XCoor
-        {
-            A = 'a',
-            B = 'b',
-            C = 'c',
-            D = 'd',
-            E = 'e',
-            F = 'f',
-            G = 'g',
-            H = 'h'
-        }
-        public enum YCoor
-        {
-            One = '1',
-            Two = '2',
-            Three = '3',
-            Four = '4',
-            Five = '5',
-            Six = '6',
-            Seven = '7',
-            Eight = '8'
-        }
         public static void ChessFileReader(string filename)
         {
             String line;
