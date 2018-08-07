@@ -5,3 +5,8 @@ ChessIsAThing/.vs/ChessIsAThing/DesignTimeBuild/.dtbcache
 ChessIsAThing/.vs/ChessIsAThing/v15/Server/sqlite3/storage.ide-shm
 *.cache
 *.lref
+ChessIsAThing/.vs/ChessIsAThing/v15/.suo
+ChessIsAThing/FileThinger/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.cache
+*.cache
+ChessIsAThing/FileThinger/obj/Debug/FileThinger.csproj.CoreCompileInputs.cache
