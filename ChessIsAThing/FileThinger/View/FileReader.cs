@@ -12,6 +12,7 @@ namespace FileThinger.View
     {
         public static void ChessFileReader(string filename)
         {
+            List<ChessPiece> p1 = new List<ChessPiece>();
             String line;
             try
             {
@@ -36,6 +37,7 @@ namespace FileThinger.View
                         s = (Side)coordinates[1];
                         x = (XCoor)coordinates[2];
                         y = (YCoor)coordinates[3];
+                        p1.Add(new ChessPiece(r, s, x, y));
                         switch (r)
                         {
                             case Rank.King:
@@ -112,7 +114,7 @@ namespace FileThinger.View
                 }
                 st.Close();
                 Console.ReadLine();
-                DisplayBoard();
+                DisplayBoard(p1);
             }
             catch (Exception e)
             {
@@ -123,7 +125,7 @@ namespace FileThinger.View
                 Console.WriteLine("Excecuting finally");
             }
         }
-        public static void DisplayBoard()
+        public static void DisplayBoard(List<ChessPiece> p1)
         {
             char[,] board = new char[8, 8];
             for (int row = 0; row < 8; row++)
@@ -135,12 +137,10 @@ namespace FileThinger.View
                         if (col % 2 == 0)
                         {
                             board[row, col] = '▒';
-                            Console.Write('▒');
                         }
                         else
                         {
                             board[row, col] = '█';
-                            Console.Write('█');
                         }
                     }
                     else
@@ -148,18 +148,26 @@ namespace FileThinger.View
                         if (col % 2 == 0)
                         {
                             board[row, col] = '█';
-                            Console.Write('█');
                         }
                         else
                         {
                             board[row, col] = '▒';
-                            Console.Write('▒');
                         }
                     }
                 }
                 Console.WriteLine("");
             }
-            Console.WriteLine(board);
+            int count = 0;
+            foreach(char p in board)
+            {
+                Console.Write(p);
+                if(count == 7)
+                {
+                    Console.WriteLine("");
+                    count = 0;
+                }
+                count++;
+            }
         }
 
         public static int ConvertXToInt(XCoor xCoor)
@@ -195,7 +203,6 @@ namespace FileThinger.View
                     break;
             }
         }
-
 
     }
 }
