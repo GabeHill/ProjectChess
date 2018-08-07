@@ -1,4 +1,5 @@
-﻿using FileThinger.View;
+﻿using FileThinger.Controller;
+using FileThinger.View;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,6 +14,8 @@ namespace FileThinger
         static void Main(string[] args)
         {
             FileReader.ChessFileReader(args[0]);
+            //Game newGame = new Game();
+            //newGame.PlayGame();
         }
 
     }

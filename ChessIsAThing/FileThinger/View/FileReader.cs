@@ -112,6 +112,7 @@ namespace FileThinger.View
                 }
                 st.Close();
                 Console.ReadLine();
+                DisplayBoard();
             }
             catch (Exception e)
             {
@@ -122,5 +123,79 @@ namespace FileThinger.View
                 Console.WriteLine("Excecuting finally");
             }
         }
+        public static void DisplayBoard()
+        {
+            char[,] board = new char[8, 8];
+            for (int row = 0; row < 8; row++)
+            {
+                for (int col = 0; col < 8; col++)
+                {
+                    if (row % 2 == 0)
+                    {
+                        if (col % 2 == 0)
+                        {
+                            board[row, col] = '▒';
+                            Console.Write('▒');
+                        }
+                        else
+                        {
+                            board[row, col] = '█';
+                            Console.Write('█');
+                        }
+                    }
+                    else
+                    {
+                        if (col % 2 == 0)
+                        {
+                            board[row, col] = '█';
+                            Console.Write('█');
+                        }
+                        else
+                        {
+                            board[row, col] = '▒';
+                            Console.Write('▒');
+                        }
+                    }
+                }
+                Console.WriteLine("");
+            }
+            Console.WriteLine(board);
+        }
+
+        public static int ConvertXToInt(XCoor xCoor)
+        {
+            switch (xCoor)
+            {
+                case XCoor.A:
+                    return 1;
+                    break;
+                case XCoor.B:
+                    return 2;
+                    break;
+                case XCoor.C:
+                    return 3;
+                    break;
+                case XCoor.D:
+                    return 4;
+                    break;
+                case XCoor.E:
+                    return 5;
+                    break;
+                case XCoor.F:
+                    return 6;
+                    break;
+                case XCoor.G:
+                    return 7;
+                    break;
+                case XCoor.H:
+                    return 8;
+                    break;
+                default:
+                    return 0;
+                    break;
+            }
+        }
+
+
     }
 }
