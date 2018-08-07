@@ -1,5 +1,6 @@
 
-ChessIsAThing/.vs/
+ChessIsAThing/FileThinger/obj/Debug
+ChessIsAThing/.vs
 ChessIsAThing/.vs/ChessIsAThing/v15/Server/sqlite3/storage.ide-wal
 ChessIsAThing/.vs/ChessIsAThing/DesignTimeBuild/.dtbcache
 ChessIsAThing/.vs/ChessIsAThing/v15/Server/sqlite3/storage.ide-shm
@@ -12,5 +13,6 @@ ChessIsAThing/FileThinger/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cac
 ChessIsAThing/FileThinger/obj/Debug/FileThinger.csproj.CoreCompileInputs.cache
 ChessIsAThing/.vs/ChessIsAThing/DesignTimeBuild/.dtbcache
 ChessIsAThing/.vs/ChessIsAThing/v15/.suo
-ChessIsAThing/FileThinger/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+ChessIsAThing/FileThinger/obj/Debug/
 ChessIsAThing/FileThinger/obj/Debug/FileThinger.csproj.CoreCompileInputs.cache
+*.cache
