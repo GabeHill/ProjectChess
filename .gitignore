@@ -1,5 +1,5 @@
 
-ChessIsAThing/.vs/ChessIsAThing/v15/Server/sqlite3/db.lock
+ChessIsAThing/.vs/
 ChessIsAThing/.vs/ChessIsAThing/v15/Server/sqlite3/storage.ide-wal
 ChessIsAThing/.vs/ChessIsAThing/DesignTimeBuild/.dtbcache
 ChessIsAThing/.vs/ChessIsAThing/v15/Server/sqlite3/storage.ide-shm
@@ -9,4 +9,8 @@ ChessIsAThing/.vs/ChessIsAThing/v15/.suo
 ChessIsAThing/FileThinger/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.cache
 *.cache
+ChessIsAThing/FileThinger/obj/Debug/FileThinger.csproj.CoreCompileInputs.cache
+ChessIsAThing/.vs/ChessIsAThing/DesignTimeBuild/.dtbcache
+ChessIsAThing/.vs/ChessIsAThing/v15/.suo
+ChessIsAThing/FileThinger/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 ChessIsAThing/FileThinger/obj/Debug/FileThinger.csproj.CoreCompileInputs.cache
