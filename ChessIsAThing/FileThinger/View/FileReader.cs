@@ -155,13 +155,30 @@ namespace FileThinger.View
                         }
                     }
                 }
-                Console.WriteLine("");
             }
-            int count = 0;
-            foreach(char p in board)
+            foreach (ChessPiece i in p1)
+            {
+                AddPiece(board, i);
+            }
+
+            PrintBoard(board);
+
+        }
+
+        private static void AddPiece(char[,] board, ChessPiece i)
+        {
+            int xCoorBoy = ConvertXToInt(i.XC) - 1;
+            int yCoorBoy = (int)i.YC - 49;
+            board[xCoorBoy, yCoorBoy] = ConvertRankToChar(i.Ranker, i.Sides);
+        }
+
+        public static void PrintBoard(char[,] board)
+        {
+            int count = 1;
+            foreach (char p in board)
             {
                 Console.Write(p);
-                if(count == 7)
+                if (count == 8)
                 {
                     Console.WriteLine("");
                     count = 0;
@@ -200,6 +217,64 @@ namespace FileThinger.View
                     break;
                 default:
                     return 0;
+                    break;
+            }
+        }
+
+        public static char ConvertRankToChar(Rank r, Side s)
+        {
+            switch (r)
+            {
+                case Rank.King:
+                    if (s == Side.light)
+                    {
+                        return 'K';
+                    }
+                    else
+                        return 'k';
+                    break;
+                case Rank.Queen:
+                    if (s == Side.light)
+                    {
+                        return 'Q';
+                    }
+                    else
+                        return 'q';
+                    break;
+                case Rank.Bishop:
+                    if (s == Side.light)
+                    {
+                        return 'B';
+                    }
+                    else
+                        return 'b';
+                    break;
+                case Rank.Knight:
+                    if (s == Side.light)
+                    {
+                        return 'K';
+                    }
+                    else
+                        return 'k';
+                    break;
+                case Rank.Rook:
+                    if (s == Side.light)
+                    {
+                        return 'R';
+                    }
+                    else
+                        return 'r';
+                    break;
+                case Rank.Pawn:
+                    if (s == Side.light)
+                    {
+                        return 'P';
+                    }
+                    else
+                        return 'p';
+                    break;
+                default:
+                    return 'N';
                     break;
             }
         }
