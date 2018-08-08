@@ -117,7 +117,32 @@ namespace FileThinger.View
                 st.Close();
                 Console.ReadLine();
                 DisplayBoard(baseBoard, baseBoard2);
-                MovePieces(p1, baseBoard, baseBoard2);
+                //MovePieces(p1, baseBoard, baseBoard2);
+                foreach (ChessPiece p in p1)
+                {
+                    if (p.Sides == Side.light)
+                    {
+                        foreach (ChessPiece i in baseBoard)
+                        {
+                            if (p.Ranker == i.Ranker)
+                            {
+                                MovePiece(p, i);
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        foreach (ChessPiece i in baseBoard2)
+                        {
+                            if (p.Ranker == i.Ranker)
+                            {
+                                MovePiece(p, i);
+                                break;
+                            }
+                        }
+                    }
+                }
                 Console.WriteLine("");
                 DisplayBoard(baseBoard, baseBoard2);
             }
@@ -131,31 +156,60 @@ namespace FileThinger.View
             }
         }
 
+        private static void MovePiece(ChessPiece move, ChessPiece currentPiece)
+        {
+            
+        }
+
         private static void MovePieces(List<ChessPiece> p1, List<ChessPiece> lightS, List<ChessPiece> darkS)
         {
-            foreach(ChessPiece p in p1)
+            bool isValidMovement;
+
+            foreach (ChessPiece p in p1)
             {
-                if (p.Sides == Side.light)
+                isValidMovement = false;
+
+                switch (p.Ranker)
                 {
-                    foreach(ChessPiece l in lightS)
+                    case Rank.King:
+                        break;
+                    case Rank.Queen:
+                        break;
+                    case Rank.Bishop:
+                        break;
+                    case Rank.Knight:
+                        break;
+                    case Rank.Rook:
+                        break;
+                    case Rank.Pawn:
+                        break;
+                    default:
+                        break;
+                }
+                if (isValidMovement)
+                {
+                    if (p.Sides == Side.light)
                     {
-                        if(l.Ranker == p.Ranker)
+                        foreach (ChessPiece l in lightS)
                         {
-                            l.XC = p.XC;
-                            l.YC = p.YC;
-                            break;
+                            if (l.Ranker == p.Ranker)
+                            {
+                                l.XC = p.XC;
+                                l.YC = p.YC;
+                                break;
+                            }
                         }
                     }
-                }
-                else
-                {
-                    foreach (ChessPiece l in darkS)
+                    else
                     {
-                        if (l.Ranker == p.Ranker)
+                        foreach (ChessPiece l in darkS)
                         {
-                            l.XC = p.XC;
-                            l.YC = p.YC;
-                            break;
+                            if (l.Ranker == p.Ranker)
+                            {
+                                l.XC = p.XC;
+                                l.YC = p.YC;
+                                break;
+                            }
                         }
                     }
                 }
@@ -210,7 +264,10 @@ namespace FileThinger.View
         {
             int xCoorBoy = ConvertXToInt(i.XC) - 1;
             int yCoorBoy = (int)i.YC - 49;
-            board[xCoorBoy, yCoorBoy] = ConvertRankToChar(i.Ranker, i.Sides);
+            if (!i.IsDead)
+            {
+                board[xCoorBoy, yCoorBoy] = ConvertRankToChar(i.Ranker, i.Sides);
+            }
         }
 
         public static void PrintBoard(char[,] board)
