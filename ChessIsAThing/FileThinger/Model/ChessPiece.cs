@@ -22,8 +22,8 @@ namespace FileThinger.Model
             this.yC = y;
         }
 
-        public XCoor XC { get => xC; }
-        public YCoor YC { get => yC; }
+        public XCoor XC { get => xC; set => xC = value; }
+        public YCoor YC { get => yC; set => yC = value; }
         public Side Sides { get => sides; }
         public Rank Ranker { get => ranker; }
         public bool IsDead { get => isDead; set => isDead = value; }

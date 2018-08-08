@@ -78,14 +78,14 @@ namespace FileThinger.Controller
                     {
                         pieces.Add(new ChessPiece(Rank.Pawn, Side.dark, (XCoor)i + 97, YCoor.Seven));
                     }
-                    pieces.Add(new ChessPiece(Rank.Rook, Side.light, XCoor.A, YCoor.Eight));
-                    pieces.Add(new ChessPiece(Rank.Rook, Side.light, XCoor.H, YCoor.Eight));
-                    pieces.Add(new ChessPiece(Rank.Knight, Side.light, XCoor.B, YCoor.Eight));
-                    pieces.Add(new ChessPiece(Rank.Knight, Side.light, XCoor.G, YCoor.Eight));
-                    pieces.Add(new ChessPiece(Rank.Bishop, Side.light, XCoor.C, YCoor.Eight));
-                    pieces.Add(new ChessPiece(Rank.Bishop, Side.light, XCoor.F, YCoor.Eight));
-                    pieces.Add(new ChessPiece(Rank.King, Side.light, XCoor.E, YCoor.Eight));
-                    pieces.Add(new ChessPiece(Rank.Queen, Side.light, XCoor.D, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Rook, Side.dark, XCoor.A, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Rook, Side.dark, XCoor.H, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Knight, Side.dark, XCoor.B, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Knight, Side.dark, XCoor.G, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Bishop, Side.dark, XCoor.C, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Bishop, Side.dark, XCoor.F, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.King, Side.dark, XCoor.E, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Queen, Side.dark, XCoor.D, YCoor.Eight));
                     break;
                 default:
                     break;

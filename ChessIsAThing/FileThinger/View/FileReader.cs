@@ -12,6 +12,8 @@ namespace FileThinger.View
     {
         public static void ChessFileReader(string filename)
         {
+            List<ChessPiece> baseBoard = GenerateSide(Side.light);
+            List<ChessPiece> baseBoard2 = GenerateSide(Side.dark);
             List<ChessPiece> p1 = new List<ChessPiece>();
             String line;
             try
@@ -114,7 +116,10 @@ namespace FileThinger.View
                 }
                 st.Close();
                 Console.ReadLine();
-                DisplayBoard(p1);
+                DisplayBoard(baseBoard, baseBoard2);
+                MovePieces(p1, baseBoard, baseBoard2);
+                Console.WriteLine("");
+                DisplayBoard(baseBoard, baseBoard2);
             }
             catch (Exception e)
             {
@@ -125,7 +130,39 @@ namespace FileThinger.View
                 Console.WriteLine("Excecuting finally");
             }
         }
-        public static void DisplayBoard(List<ChessPiece> p1)
+
+        private static void MovePieces(List<ChessPiece> p1, List<ChessPiece> lightS, List<ChessPiece> darkS)
+        {
+            foreach(ChessPiece p in p1)
+            {
+                if (p.Sides == Side.light)
+                {
+                    foreach(ChessPiece l in lightS)
+                    {
+                        if(l.Ranker == p.Ranker)
+                        {
+                            l.XC = p.XC;
+                            l.YC = p.YC;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (ChessPiece l in darkS)
+                    {
+                        if (l.Ranker == p.Ranker)
+                        {
+                            l.XC = p.XC;
+                            l.YC = p.YC;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static void DisplayBoard(List<ChessPiece> p1, List<ChessPiece> p2)
         {
             char[,] board = new char[8, 8];
             for (int row = 0; row < 8; row++)
@@ -157,6 +194,10 @@ namespace FileThinger.View
                 }
             }
             foreach (ChessPiece i in p1)
+            {
+                AddPiece(board, i);
+            }
+            foreach (ChessPiece i in p2)
             {
                 AddPiece(board, i);
             }
@@ -221,6 +262,45 @@ namespace FileThinger.View
             }
         }
 
+        public static List<ChessPiece> GenerateSide(Side s)
+        {
+            List<ChessPiece> pieces = new List<ChessPiece>();
+            switch (s)
+            {
+                case Side.light:
+                    for (int i = 0; i < 8; i++)
+                    {
+                        pieces.Add(new ChessPiece(Rank.Pawn, Side.light, (XCoor)i + 97, YCoor.Two));
+                    }
+                    pieces.Add(new ChessPiece(Rank.Rook, Side.light, XCoor.A, YCoor.One));
+                    pieces.Add(new ChessPiece(Rank.Rook, Side.light, XCoor.H, YCoor.One));
+                    pieces.Add(new ChessPiece(Rank.Knight, Side.light, XCoor.B, YCoor.One));
+                    pieces.Add(new ChessPiece(Rank.Knight, Side.light, XCoor.G, YCoor.One));
+                    pieces.Add(new ChessPiece(Rank.Bishop, Side.light, XCoor.C, YCoor.One));
+                    pieces.Add(new ChessPiece(Rank.Bishop, Side.light, XCoor.F, YCoor.One));
+                    pieces.Add(new ChessPiece(Rank.King, Side.light, XCoor.E, YCoor.One));
+                    pieces.Add(new ChessPiece(Rank.Queen, Side.light, XCoor.D, YCoor.One));
+                    break;
+                case Side.dark:
+                    for (int i = 0; i < 8; i++)
+                    {
+                        pieces.Add(new ChessPiece(Rank.Pawn, Side.dark, (XCoor)i + 97, YCoor.Seven));
+                    }
+                    pieces.Add(new ChessPiece(Rank.Rook, Side.dark, XCoor.A, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Rook, Side.dark, XCoor.H, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Knight, Side.dark, XCoor.B, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Knight, Side.dark, XCoor.G, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Bishop, Side.dark, XCoor.C, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Bishop, Side.dark, XCoor.F, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.King, Side.dark, XCoor.E, YCoor.Eight));
+                    pieces.Add(new ChessPiece(Rank.Queen, Side.dark, XCoor.D, YCoor.Eight));
+                    break;
+                default:
+                    break;
+            }
+            return pieces;
+        }
+
         public static char ConvertRankToChar(Rank r, Side s)
         {
             switch (r)
@@ -252,10 +332,10 @@ namespace FileThinger.View
                 case Rank.Knight:
                     if (s == Side.light)
                     {
-                        return 'K';
+                        return 'N';
                     }
                     else
-                        return 'k';
+                        return 'n';
                     break;
                 case Rank.Rook:
                     if (s == Side.light)
