@@ -1,0 +1,15 @@
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\bin\Debug\ChessIsAThing.exe.config
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\bin\Debug\ChessIsAThing.exe
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\bin\Debug\ChessIsAThing.pdb
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\ChessIsAThing.csprojAssemblyReference.cache
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\MainWindow.g.cs
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\App.g.cs
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\ChessIsAThing_MarkupCompile.cache
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\ChessIsAThing_MarkupCompile.lref
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\MainWindow.baml
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\ChessIsAThing.g.resources
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\ChessIsAThing.Properties.Resources.resources
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\ChessIsAThing.csproj.GenerateResource.cache
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\ChessIsAThing.csproj.CoreCompileInputs.cache
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\ChessIsAThing.exe
+C:\Users\h\Documents\GitHub\ProjectChess\ChessIsAThing\ChessIsAThing\obj\Debug\ChessIsAThing.pdb
